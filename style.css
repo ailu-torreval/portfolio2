@@ -1,0 +1,673 @@
+@import url("https://fonts.googleapis.com/css2?family=Charm&family=Fjalla+One&family=Manrope:wght@400;600&family=Poppins:wght@300;400&family=Roboto:wght@300&display=swap");
+@font-face {
+  src: url("../fonts/AkkuratPro-Regular.otf");
+  font-family: "akk";
+}
+@font-face {
+  src: url("../fonts/Gotham-Bold.otf");
+  font-family: "gotham-bold";
+}
+
+:root {
+  --light: #fcfaf5;
+  --dark: #303030;
+  --orange: #ffdaa0;
+  --coral: #ffabab;
+  --silfen-blue: #79afd4;
+  --silfen-green: #add4b2;
+  --silfen-purple: #b9b0cf;
+  --quickit-green: #006763;
+  --quickit-yellow: #fccc8a;
+  --quickit-lightgrey: #e3e3e3;
+  --hogwarts-red: #5f0a02;
+  --hogwarts-light: #f7e9c2;
+  --hogwarts-dark: #3e0500;
+}
+
+/* GLOBAL STYLING */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+  }
+
+  100% {
+    stroke-dasharray: 50% 0;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--light);
+}
+
+.body {
+  background-color: var(--light);
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+section {
+  height: 90vh;
+}
+
+footer {
+  background-color: var(--dark);
+}
+
+footer p {
+  color: var(--light);
+}
+
+.arrow-down,
+.arrow-right {
+  -webkit-text-fill-color: var(--light);
+  -webkit-text-stroke: 1.5px var(--dark);
+  text-shadow: 1px 1px var(--dark);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* INDEX PAGE */
+
+header {
+  height: 94vh;
+  background-image: url("./assets/bg1.png");
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-nav {
+  align-self: flex-end;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.nav-proyects {
+  text-decoration: underline;
+}
+
+header h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  margin: 0;
+  margin-top: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0rem;
+}
+
+header h3 {
+  font-size: 2.8rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+header span {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.down-arrow {
+  margin-top: 1rem;
+  align-self: center;
+  justify-self: center;
+  -webkit-text-fill-color: var(--light);
+  -webkit-text-stroke: 3px var(--dark);
+  text-shadow: 4px 4px var(--dark);
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.nav-bar {
+  background-color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav-title {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+#selfie1 {
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+  background-color: var(--light);
+  box-shadow: 5px 7px black;
+}
+
+.some-bubble {
+  font-size: 1.7rem;
+  position: sticky;
+  left: 1.5vw;
+  top: 57vh;
+  width: min-content;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border-radius: 50px;
+  background: linear-gradient(45deg, var(--coral), var(--orange));
+}
+
+.some-bubble ul {
+  list-style: none;
+  padding-left: 0;
+}
+.some-bubble ul li:first-child {
+  padding-top: 0.8rem;
+}
+
+.some-bubble li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+
+.some-bubble li:hover {
+  transform: scale(1.03, 1.03);
+}
+
+#ab-me {
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  gap: 5%;
+}
+
+#ab-me-txt {
+  font-size: 1.3rem;
+  align-self: center;
+}
+
+#ab-me-txt h3 {
+  font-size: 2.5rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+#ab-me-txt ul {
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+}
+
+#tool-box {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 4rem;
+}
+
+.tool {
+  font-size: 1.7rem;
+  background: linear-gradient(45deg, var(--coral), var(--orange));
+  padding: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-radius: 50px;
+}
+
+#projects {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#projects h2 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  font-weight: 900;
+}
+
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 5%;
+}
+
+#projects-grid a {
+  width: 35vw;
+  justify-self: center;
+  position: relative;
+}
+
+#projects-grid img {
+  width: 100%;
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+  box-shadow: 5px 7px black;
+}
+
+#project1,
+#project2,
+#project3,
+#project4 {
+  position: absolute;
+  top: 0;
+  height: 97%;
+  width: 100%;
+  opacity: 0;
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+  background-color: var(--light);
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: underline;
+  text-align: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#project1:hover,
+#project2:hover,
+#project3:hover,
+#project4:hover {
+  animation: fade-in 0.2s linear forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+#contact {
+  background-image: url("./assets/bg1.png");
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+}
+
+#contact-box {
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+  background-color: var(--light);
+  box-shadow: 5px 7px black;
+  width: 70ch;
+  padding: 5%;
+}
+
+#contact-box h2 {
+  font-style: italic;
+  font-size: 2.2rem;
+  margin-top: 0;
+}
+
+#contact-box p {
+  padding-bottom: 1rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+#contact-box a {
+  border-radius: 50px;
+  background: linear-gradient(45deg, var(--coral), var(--orange));
+  background-size: 130%;
+  padding: 1rem;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+#contact-box a:hover {
+  animation: gradient 0.2s linear forwards;
+  background-position: right;
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* PROJECTS PAGES */
+
+.project-header {
+  padding-top: 5rem;
+}
+
+/* PROJECT 1 SILFEN PAGE */
+
+.silfen-header {
+  background-image: url("./assets/silfen-bg1.png");
+}
+
+.proj-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-title {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.project-header h4 {
+  font-size: 2.2rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.cta-btn {
+  padding: 1rem;
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+  box-shadow: 2px 3px black;
+  background-color: white;
+  font-size: 1.3rem;
+}
+
+.cta-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+  box-shadow: 4px 6px black;
+}
+
+#silfen-bubble {
+  background: linear-gradient(45deg, var(--silfen-purple), var(--silfen-blue));
+}
+
+/* #white-nav {
+  background-color: white;
+} */
+
+.proj-info {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.info-container {
+  display: flex;
+  gap: 1.8rem;
+  justify-content: center;
+}
+
+.info-txt {
+  font-size: 1.3rem;
+}
+
+.info-txt p {
+  margin-top: 0;
+}
+
+.info-txt ul {
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+}
+
+#silf-tool {
+  background: linear-gradient(45deg, var(--silfen-purple), var(--silfen-blue));
+}
+
+.proj-info h2 {
+  font-size: 2.2rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.style-container {
+  width: max-content;
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+  box-shadow: 2px 3px black;
+  padding: 2.5rem;
+  align-self: flex-start;
+  background-color: white;
+}
+
+.colors {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.colors li {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+#col1a {
+  background-color: var(--silfen-blue);
+}
+#col1b {
+  background-color: var(--silfen-green);
+}
+#col1c {
+  background-color: var(--silfen-purple);
+}
+#col1d {
+  background-color: black;
+}
+
+.fonts span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#font1a {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#font1b {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mockups1 {
+  display: flex;
+  justify-content: center;
+}
+
+.mock1 {
+  margin-top: 1%;
+}
+
+.mockups2 {
+  background-image: url("./assets/silfen-bg1.png");
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.prev-btn,
+.next-btn {
+  padding: 1rem;
+  border: 3px solid var(--dark);
+  border-radius: 5px;
+  box-shadow: 2px 3px var(--dark);
+}
+
+/* PROJECT 2 PAGE - QUICKIT */
+
+.quickit-header {
+  background-image: url("./assets/quickit-bg1.png");
+}
+
+#col2a {
+  background-color: var(--quickit-lightgrey);
+}
+#col2b {
+  background-color: var(--quickit-yellow);
+}
+#col2c {
+  background-color: var(--quickit-green);
+}
+#col2d {
+  background-color: black;
+}
+
+#font2a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#quickit-tools li {
+  background: linear-gradient(
+    45deg,
+    var(--quickit-lightgrey),
+    var(--quickit-yellow)
+  );
+}
+
+#quickit-bubble {
+  background: linear-gradient(
+    45deg,
+    var(--quickit-lightgrey),
+    var(--quickit-yellow)
+  );
+}
+
+#quickit-mocks {
+  background-image: url("./assets/quickit-bg1.png");
+}
+
+/* PROJECT 2 - LOUISIANA PAGE */
+
+#col3a {
+  background-color: white;
+  border: 1px solid black;
+}
+#col3b {
+  background-color: black;
+}
+
+#font3a {
+  font-family: "akk";
+  font-weight: 600;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#font3b {
+  font-family: "gotham-bold";
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mockups2-neutral {
+  background-image: url("./assets/bg1.png");
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* PROJECT 4 HOGWARTS */
+
+#hogwarts-proj {
+  height: 80vh;
+}
+
+#col4a {
+  background-color: var(--hogwarts-light);
+}
+#col4b {
+  background-color: var(--hogwarts-red);
+}
+#col4c {
+  background-color: var(--hogwarts-dark);
+}
+#col4d {
+  background-color: black;
+}
+
+#font4a {
+  font-family: "Charm", cursive;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#font4b {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#hogwarts-mock {
+  background-image: url("./assets/bg1.png");
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: center;
+  height: 85vh;
+}
