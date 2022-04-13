@@ -80,6 +80,12 @@ footer p {
 
 /* INDEX PAGE */
 
+#ab-me,
+#projects,
+#contact-box {
+  transform: translateY(10px);
+}
+
 header {
   height: 94vh;
   background-image: url("./assets/bg1.png");
@@ -200,6 +206,7 @@ header span {
   margin-right: 15%;
   display: flex;
   gap: 5%;
+  opacity: 0;
 }
 
 #ab-me-txt {
@@ -238,6 +245,8 @@ header span {
 #projects {
   margin-left: 15%;
   margin-right: 15%;
+  opacity: 0;
+  padding-top: 6%;
 }
 
 #projects h2 {
@@ -299,7 +308,7 @@ header span {
 
 @keyframes fade-in {
   to {
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 
@@ -323,6 +332,7 @@ header span {
   box-shadow: 5px 7px black;
   width: 70ch;
   padding: 5%;
+  opacity: 0;
 }
 
 #contact-box h2 {
@@ -363,6 +373,17 @@ footer {
 
 .project-header {
   padding-top: 5rem;
+}
+
+.proj-info,
+.mockups1,
+.phone1,
+.phone2,
+.phone3,
+.phone4,
+.phone5 {
+  opacity: 0;
+  transform: translateY(10px);
 }
 
 /* PROJECT 1 SILFEN PAGE */
