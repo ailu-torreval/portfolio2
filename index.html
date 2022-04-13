@@ -13,10 +13,11 @@
 <body class="body">
     <header>
         <ul class="header-nav">
-            <li> <a href="#contact">Contact Me</a></li>
+            <li class="header-contact"> <a href="#contact">Contact Me</a></li>
             <li class="nav-proyects">
                 <a href="#projects">Projects</a>
             </li>
+            <li class="burger-btn"><i class="fas fa-bars"></i></li>
         </ul>
         <div class="header-txt">
             <h3><span>Hello!</span> I'm</h3>
@@ -74,13 +75,35 @@
         </div>
         <div class="down-arrow"><i class="fas fa-caret-down"></i></div>
     </header>
+    <div class="burger-menu hidden">
+        <ul>
+            <li class="close-btn"><i class="fas fa-times"></i></li>
+
+            <li> <a href="#contact">Contact Me</a></li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="burger-some">
+                <ul>
+                    <li class="contact-icon"><a href="mailto:ailu.torreval@gmail.com"><span><i
+                                    class="far fa-envelope"></i></span></a></li>
+                    <li class="lkdn"> <a href="https://www.linkedin.com/in/ailin-torre-val/"><span><i
+                                    class="fab fa-linkedin-in"></i></span></a> </li>
+                    <li class="git-hub"><a href="https://github.com/ailu-torreval"><span><i
+                                    class="fab fa-github"></i></span>
+                        </a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     <nav class="nav-bar">
         <a href="index.html" class="nav-title">AILIN TORRE VAL</a>
         <ul class="header-nav">
-            <li> <a href="#contact">Contact Me</a></li>
+            <li class="header-contact"> <a href="#contact">Contact Me</a></li>
             <li class="nav-proyects">
                 <a href="#projects">Projects</a>
             </li>
+            <li class="burger-btn"><i class="fas fa-bars"></i></li>
         </ul>
     </nav>
     <div class="some-bubble">
@@ -95,8 +118,9 @@
     </div>
     <section id="about-me">
         <div id="ab-me">
-            <img class="hidden" id="selfie" src="./assets/selfie.png" alt="ailin-pic" height="500">
-            <img id="selfie1" src="./assets/selfie1.JPG" alt="ailin-pic" height="400">
+            <div id="selfie-container">
+                <img id="selfie1" src="./assets/selfie1.JPG" alt="ailin-pic" height="400">
+            </div>
             <div id="ab-me-txt">
                 <h3>HI THERE!</h3>
                 <p>I’m Ailin, a Multimedia Design Student.
