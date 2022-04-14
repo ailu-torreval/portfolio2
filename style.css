@@ -26,12 +26,16 @@
 
 /* GLOBAL STYLING */
 
+body {
+  position: relative;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--dark);
 }
 
-img,
+img:not(#adobe-logo),
 svg {
   max-width: 100%;
 }
@@ -84,7 +88,7 @@ footer p {
   display: none !important;
 }
 
-.burger-menu,
+.burger-btn-nav,
 .burger-btn {
   display: none;
 }
@@ -223,6 +227,7 @@ header span {
 
 #selfie-container {
   width: 100%;
+  max-width: 90%;
 }
 
 #ab-me-txt {
@@ -258,11 +263,17 @@ header span {
   border-radius: 50px;
 }
 
+/* #adobe-logo {
+  max-width: 100%;
+} */
+
 #projects {
   margin-left: 15%;
   margin-right: 15%;
   opacity: 0;
   padding-top: 6%;
+  margin-bottom: 15%;
+  height: max-content;
 }
 
 #projects h2 {
@@ -633,7 +644,11 @@ article {
   background-image: url("./assets/quickit-bg1.png");
 }
 
-/* PROJECT 2 - LOUISIANA PAGE */
+/* PROJECT 3 - LOUISIANA PAGE */
+
+.m-title {
+  display: none;
+}
 
 #col3a {
   background-color: white;
@@ -738,6 +753,16 @@ article {
     margin-top: 18%;
   }
 
+  #projects-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #projects-grid a {
+    width: auto;
+    margin-bottom: 5%;
+  }
+
   #project1,
   #project2,
   #project3,
@@ -752,6 +777,16 @@ article {
   #contact-box {
     margin-left: 15%;
     margin-right: 15%;
+  }
+
+  #contact-box p {
+    padding-bottom: 0;
+  }
+
+  #contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   /* PROJECT PAGES */
@@ -794,8 +829,11 @@ article {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .burger-menu,
+@media screen and (max-width: 600px) {
+  body {
+    overflow-y: var(--scroll);
+  }
+  .burger-btn-nav,
   .burger-btn {
     display: block;
     cursor: pointer;
@@ -804,6 +842,80 @@ article {
   .header-contact,
   .nav-proyects {
     display: none;
+  }
+
+  .burger-appear {
+    animation: appear 0.5s linear 1;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .burger-menu {
+    position: fixed;
+    background-color: var(--dark);
+    color: var(--light);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    z-index: 25;
+  }
+
+  .links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    font-size: 2.8rem;
+    align-items: flex-end;
+    padding-left: 0;
+    padding-right: 2rem;
+    justify-content: center;
+  }
+
+  .burger-some {
+    list-style: none;
+    font-size: 2rem;
+    float: right;
+    display: flex;
+    gap: 2rem;
+    z-index: 19;
+    left: 1.5vw;
+    top: 57vh;
+    width: min-content;
+    padding-left: 0.5rem;
+    margin-right: 1rem;
+    padding-right: 0.5rem;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--coral), var(--orange));
+  }
+
+  .burger-some ul {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .burger-some ul li:first-child {
+    padding-top: 0.8rem;
+  }
+
+  .burger-some li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+  }
+
+  .burger-menu a,
+  .fa-times {
+    color: var(--light);
   }
 
   header {
@@ -822,6 +934,11 @@ article {
     margin-top: 0;
   }
 
+  section {
+    min-height: 89vh;
+    margin-bottom: 15%;
+  }
+
   .some-bubble {
     display: none;
   }
@@ -830,5 +947,51 @@ article {
     margin-top: 15%;
     margin-left: 10%;
     margin-right: 10%;
+  }
+
+  #contact {
+    background-image: url("./assets/bg2.png");
+  }
+
+  footer {
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+
+  /*PROJECT PAGES */
+
+  .silfen-header {
+    background-image: url("./assets/silfen-bg2.png");
+  }
+
+  .proj-info {
+    margin-top: 30%;
+    margin-bottom: 40%;
+  }
+
+  .mockups1 {
+    gap: 5rem;
+  }
+
+  .mockups2 {
+    background-image: url("./assets/silfen-bg2.png");
+    margin-top: 25%;
+  }
+
+  .quickit-header,
+  #quickit-mocks {
+    background-image: url("./assets/quickit-bg2.png");
+  }
+
+  .big-title {
+    display: none;
+  }
+
+  .m-title {
+    display: block;
+  }
+  .mockups2-neutral,
+  #hogwarts-mock {
+    background-image: url("./assets/bg2.png");
   }
 }
