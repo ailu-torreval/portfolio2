@@ -949,6 +949,11 @@ article {
     margin-right: 10%;
   }
 
+  .more-margin {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   #contact {
     background-image: url("./assets/bg2.png");
   }
